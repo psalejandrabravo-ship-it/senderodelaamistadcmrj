@@ -22,7 +22,12 @@ export function Stage({ children, view }: { children: ReactNode; view: View }) {
     return <RotatePrompt />;
   }
 
-  return <div className="app-shell">{children}</div>;
+  return (
+    <div className="app-shell">
+      {children}
+      <p className={`credit ${view === "start" ? "credit-light" : "credit-dark"}`}>Psicóloga Alejandra Bravo Pino</p>
+    </div>
+  );
 }
 
 function RotatePrompt() {
